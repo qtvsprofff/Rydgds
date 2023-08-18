@@ -12,7 +12,7 @@ class Var(object):
     API_ID = int(getenv('API_ID', '11427887'))
     API_HASH = str(getenv('API_HASH', '317ea7bfc3dcbfb2a4aa7c866110074e'))
     BOT_TOKEN = str(getenv('BOT_TOKEN', '6486983020:AAHLVzW2TAnlqXVZmJofY8wuvqTkv4zwm3M'))
-    SESSION_NAME = str(getenv('SESSION_NAME', 'filetolinkda'))
+    SESSION_NAME = str(getenv('SESSION_NAME', 'qtshort'))
     SLEEP_THRESHOLD = int(getenv('SLEEP_THRESHOLD', '60'))
     WORKERS = int(getenv('WORKERS', '4'))
     BIN_CHANNEL = int(getenv('BIN_CHANNEL', '-1001854186393'))
@@ -24,13 +24,13 @@ class Var(object):
     NO_PORT = bool(getenv('NO_PORT', False))
     SHORTENER_API = str(getenv('SHORTENER_API', '02c93c55c4567035a37ffc32731d8f0e1c530f98'))
     SHORTENER_WEBSITE = str(getenv('SHORTENER_WEBSITE', 'tnshort.net'))
-    FDQN = str(getenv('FDQN', 'https://filetolinkda.onrender.com'))
+    FDQN = str(getenv('FDQN', 'https://qtshort.onrender.com'))
 
     APP_NAME = None
     OWNER_USERNAME = str(getenv('OWNER_USERNAME'))
     if 'DYNO' in environ:
         ON_HEROKU = True
-        APP_NAME = str(getenv('APP_NAME', 'filetolinkda'))
+        APP_NAME = str(getenv('APP_NAME', 'qtshort'))
     
     else:
         ON_HEROKU = False
@@ -42,4 +42,4 @@ class Var(object):
         URL = "http://{}/".format(FQDN)
     DATABASE_URL = str(getenv('DATABASE_URL', "mongodb+srv://hillsking1222:kuraman1@kumaran1.d6ahc05.mongodb.net/?retryWrites=true&w=majority"))
     UPDATES_CHANNEL = str(getenv('UPDATES_CHANNEL', "@Qtmve_linkzZz"))
-    BANNED_CHANNELS = list(set(int(x) for x in str(getenv("BANNED_CHANNELS", "-1001666069456")).split())) 
+    BANNED_CHANNELS = list(set(int(x) for x in str(getenv("BANNED_CHANNELS", "")).split())) 
